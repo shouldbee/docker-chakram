@@ -66,5 +66,33 @@ $ chakram
 
 See [official site](http://dareid.github.io/chakram/) for more information.
 
+## Write tests in CoffeeScript
+
+CoffeeScript has DSL friendly syntax. You probably want to write some tests in CoffeeScript.
+You can do this as this docker image contains CoffeeScript!
+
+```
+$ mkdir test
+$ $EDITOR test/test.coffee
+
+chakram = require('chakram')
+expect = chakram.expect
+describe 'HTTP assertions', ->
+  it 'should make HTTP assertions easy', ->
+    response = chakram.get('http://httpbin.org/get?test=chakram')
+    expect(response).to.have.status 200
+    expect(response).to.have.header 'content-type', 'application/json'
+    expect(response).not.to.be.encoded.with.gzip
+    expect(response).to.comprise.of.json args: test: 'chakram'
+    chakram.wait()
+
+$ chakram
+
+  HTTP assertions
+    ✓ should make HTTP assertions easy (563ms)
+
+
+  1 passing (570ms)
+```
 
 [Chakram]: http://dareid.github.io/chakram/
