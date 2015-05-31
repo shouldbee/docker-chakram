@@ -71,7 +71,7 @@ See [official site](http://dareid.github.io/chakram/) for more information.
 CoffeeScript has DSL friendly syntax. You probably want to write some tests in CoffeeScript.
 You can do this as this docker image contains CoffeeScript!
 
-```
+```console
 $ mkdir test
 $ $EDITOR test/test.coffee
 
