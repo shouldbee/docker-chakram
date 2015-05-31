@@ -2,6 +2,8 @@
 
 [Chakram] is REST API test framework. This is a docker image that eases setup.
 
+![](https://raw.githubusercontent.com/shouldbee/docker-chakram/master/chakram.gif)
+
 ## About Chakram
 
 > Chakram is an API testing framework designed to perform end to end tests on JSON REST endpoints. The library offers a BDD testing style and fully exploits javascript promises - the resulting tests are simple, clear and expressive. The library is built on [node.js](https://nodejs.org/), [mocha](http://mochajs.org/) and [chai](http://chaijs.com/).
